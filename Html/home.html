@@ -226,7 +226,7 @@
       100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
     }
 
-    /* Responsive */
+    /* Responsive amélioré avec photo en haut */
     @media (max-width: 1200px) {
       .hero {
         padding: 0 8%;
@@ -269,7 +269,13 @@
         flex-direction: column;
         text-align: center;
         padding: 120px 5% 80px;
-        gap: 3rem;
+        gap: 2rem;
+      }
+      
+      /* Ordre des éléments modifié pour mettre la photo en haut */
+      .hero-image {
+        order: -1; /* Place l'image en premier */
+        margin-bottom: 2rem;
       }
       
       p {
@@ -329,7 +335,7 @@
       <li><a href="../Html/Interests.html">Interests</a></li>
     </ul>
   </header>
-<br>
+
   <section class="hero" id="home">
     <div class="hero-content">
       <h4 style="color: white">Hello, I'm</h4>
