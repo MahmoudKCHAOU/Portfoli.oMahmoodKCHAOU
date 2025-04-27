@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets | Mahmoud KCHAOU</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/Pages.css">
+  <link rel="stylesheet" href="../CSS/Projects.css">
+  <link rel="icon" href="../img/ME.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Portfolio <span>.O</span></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navlist" id="navlist">
+      <li><a href="../Html/home.html">Home</a></li>
+      <li><a href="../Html/About.html">About</a></li>
+      <li><a href="../Html/Internships.html">Internships</a></li>
+      <li><a href="../Html/Skills.html">Skills</a></li>
+      <li><a href="#" class="active-nav">Projects</a></li>
+      <li><a href="../Html/Social_Life.html">Social Life</a></li>
+      <li><a href="../Html/Interests.html">Interests</a></li>
+    </ul>
+  </header>
+
+  <section class="projects-section">
+    <div class="projects-header">
+      <h1 style="color: white;">Mes Projets</span></h1>
+      
+    </div>
+
+    <div class="projects-grid">
+      <!-- Projet 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="../img/image.png" alt="Application Dbara">
+          <div class="project-overlay">
+            <div class="project-icons">
+              <div class="icon-container" data-tooltip="Code Source">
+                <i class="ri-github-fill"></i>
+              </div>
+              <div class="icon-container" data-tooltip="Voir la démo">
+                <i class="ri-external-link-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Application Dbara</h3>
+          <p>Application mobile de recettes tunisiennes avec système de recommandation personnalisée.</p>
+          <div class="project-tech">
+            <span>Android Studio</span>
+            <span>Java</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="../img/iot1.png" alt="Dashboard Power BI">
+          <div class="project-overlay">
+            <div class="project-icons">
+              <div class="icon-container" data-tooltip="Documentation">
+                <i class="ri-file-text-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Smart Home</h3>
+          <p>Features include automatic window closure during rain, 
+            clothes protection alerts, motion-activated lighting, and smart garage control. The system 
+            processes real-time environmental data to optimize home security and energy efficiency.</p>
+          <div class="project-tech">
+            <span>IOT</span>
+            <span>Circuit</span>
+            <span>Arduino UNO</span>
+            <span>LRD</span>
+            <span>LRD</span>
+            <span>YL-83</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="../img/olampicGame.png" alt="Dashboard Power BI">
+          <div class="project-overlay">
+            <div class="project-icons">
+              <div class="icon-container" data-tooltip="Documentation">
+                <i class="ri-file-text-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Analyse Commerciale</h3>
+          <p>Dashboard interactif pour le suivi des performances commerciales avec données en temps réel.</p>
+          <div class="project-tech">
+            <span>Power BI</span>
+            <span>SQL</span>
+            <span>Power Pivot</span>
+            <span>DAX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="../img/projet3.png" alt="Gestion de projets">
+          <div class="project-overlay">
+            <div class="project-icons">
+              <div class="icon-container" data-tooltip="Code Source">
+                <i class="ri-github-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Outil de Gestion</h3>
+          <p>Application web de gestion de projets avec suivi des tâches et collaboration d'équipe.</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuIcon = document.getElementById('menu-icon');
+      const navList = document.getElementById('navlist');
+    
+      if (menuIcon && navList) {
+        menuIcon.addEventListener('click', function() {
+          this.classList.toggle('bx-x');
+          navList.classList.toggle('active');
+          document.body.classList.toggle('no-scroll');
+        });
+    
+        // Ferme le menu quand un lien est cliqué
+        document.querySelectorAll('.navlist a').forEach(link => {
+          link.addEventListener('click', function() {
+            menuIcon.classList.remove('bx-x');
+            navList.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+          });
+        });
+      }
+    });
+
+    // Empêcher le clic droit
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  
+});
+
+// Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
+document.addEventListener('keydown', (e) => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && e.key === 'I') || // Ctrl+Shift+I
+    (e.ctrlKey && e.shiftKey && e.key === 'J') || // Ctrl+Shift+J
+    (e.ctrlKey && e.key === 'U') // Ctrl+U (afficher le code source)
+  ) {
+    e.preventDefault();
+    
+  }
+});
+            </script>
+</body>
+</html>
