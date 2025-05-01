@@ -12,9 +12,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
-  
-  <link rel="manifest" href="../site.webmanifest"> 
+  <link rel="manifest" href="/site.webmanifest">
+
   <style>
+    /* Styles modernisés avec les mêmes couleurs */
     .hero {
       display: flex;
       align-items: center;
@@ -315,42 +316,11 @@
         height: 300px;
       }
     }
-
-    /* Style pour le compteur admin */
-    #adminCounter {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0,0,0,0.8);
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      z-index: 9999;
-      border: 1px solid #13bbff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      display: none; /* Caché par défaut */
-    }
-
-    #hideCounter {
-      background: none;
-      border: none;
-      color: #13bbff;
-      cursor: pointer;
-      margin-left: 8px;
-      font-size: 16px;
-    }
   </style>
 </head>
 
 <body>
-  <div id="adminCounter" style="display: none; position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px; z-index: 9999; border: 1px solid #13bbff; align-items: center; gap: 8px;">
-    <i class="ri-eye-line"></i>
-    <span id="visitorCount">0</span> visites
-    <button id="hideCounter" style="background: none; border: none; color: #13bbff; cursor: pointer; margin-left: 8px;">×</button>
-  </div>
+  <div class="particles" id="particles"></div>
   
   <header>
     <a href="#" class="logo">Portfoli<span>O</span></a>
@@ -447,42 +417,23 @@
           particlesContainer.appendChild(particle);
         }
       }
-
-// Compteur admin
-const adminCounter = document.getElementById('adminCounter');
-if (adminCounter) {
-  const isAdmin = localStorage.getItem('portfolioAdmin') === 'mahmoud123';
-  
-  if (isAdmin) {
-    adminCounter.style.display = 'flex';
-    
-    // Système de comptage
-    let count = localStorage.getItem('visits') || 0;
-    count = parseInt(count) + 1;
-    localStorage.setItem('visits', count);
-    document.getElementById('visitorCount').textContent = count;
-    
-    document.getElementById('hideCounter').addEventListener('click', () => {
-      adminCounter.style.display = 'none';
     });
-  }
-}
-      // Empêcher le clic droit
-      document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-      });
 
-      // Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
-      // document.addEventListener('keydown', (e) => {
-      //   if (
-      //     e.key === 'F12' ||
-      //     (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-      //     (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-      //     (e.ctrlKey && e.key === 'U')
-      //   ) {
-      //     e.preventDefault();
-      //   }
-      // });
+    // Empêcher le clic droit
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+
+    // Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+      }
     });
   </script>
 </body>
