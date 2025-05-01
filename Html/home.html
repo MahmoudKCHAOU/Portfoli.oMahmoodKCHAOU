@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
-  <link rel="manifest" href="/site.webmanifest">
-
+  
+  <link rel="manifest" href="../site.webmanifest"> 
   <style>
     .hero {
       display: flex;
@@ -346,13 +346,10 @@
 </head>
 
 <body>
-  <div class="particles" id="particles"></div>
-  
-  <!-- Compteur admin seulement -->
-  <div id="adminCounter">
+  <div id="adminCounter" style="display: none; position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px; z-index: 9999; border: 1px solid #13bbff; align-items: center; gap: 8px;">
     <i class="ri-eye-line"></i>
-    <span id="visitorCount">0</span> visites totales
-    <button id="hideCounter">×</button>
+    <span id="visitorCount">0</span> visites
+    <button id="hideCounter" style="background: none; border: none; color: #13bbff; cursor: pointer; margin-left: 8px;">×</button>
   </div>
   
   <header>
@@ -451,34 +448,25 @@
         }
       }
 
-                // ADMIN COUNTER - Visible seulement par vous
-          const adminCounter = document.getElementById('adminCounter');
-          const visitorCount = document.getElementById('visitorCount');
-          const hideCounterBtn = document.getElementById('hideCounter');
-
-          // Vérification du mot de passe
-          const isAdmin = localStorage.getItem('portfolioAdmin') === 'mahmoud123';
-
-          if (isAdmin) {
-            adminCounter.style.display = 'flex';
-            
-            // Système de comptage
-            let count = localStorage.getItem('portfolioVisits') || 0;
-            count = parseInt(count);
-            
-            if (!sessionStorage.getItem('visited')) {
-              count++;
-              localStorage.setItem('portfolioVisits', count);
-              sessionStorage.setItem('visited', 'true');
-            }
-            
-            visitorCount.textContent = count;
-            
-            // Bouton pour cacher le compteur
-            hideCounterBtn.addEventListener('click', function() {
-              adminCounter.style.display = 'none';
-            });
-          }
+// Compteur admin
+const adminCounter = document.getElementById('adminCounter');
+if (adminCounter) {
+  const isAdmin = localStorage.getItem('portfolioAdmin') === 'mahmoud123';
+  
+  if (isAdmin) {
+    adminCounter.style.display = 'flex';
+    
+    // Système de comptage
+    let count = localStorage.getItem('visits') || 0;
+    count = parseInt(count) + 1;
+    localStorage.setItem('visits', count);
+    document.getElementById('visitorCount').textContent = count;
+    
+    document.getElementById('hideCounter').addEventListener('click', () => {
+      adminCounter.style.display = 'none';
+    });
+  }
+}
       // Empêcher le clic droit
       document.addEventListener('contextmenu', (e) => {
         e.preventDefault();
