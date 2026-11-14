@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>document.documentElement.lang = "en"; document.documentElement.dataset.theme = "dark"; try { if (localStorage.getItem("portfolio-language") === "fr") document.documentElement.lang = "fr"; if (localStorage.getItem("portfolio-theme") === "light") document.documentElement.dataset.theme = "light"; } catch (_) {} document.documentElement.classList.add("i18n-pending");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Mahmoud KCHAOU</title>
@@ -11,7 +12,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
-  <link rel="manifest" href="/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     /* Styles spécifiques pour la page d'accueil */
@@ -144,133 +144,81 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="../CSS/portfolio-polish.css?v=20261114theme11">
 </head>
 <body>
   <header>
-    <a href="#" class="logo">Portfoli <span>.O</span></a>
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="../Html/home.html" class="logo">Portfoli <span>.O</span></a>
+    <button class="bx bx-menu" id="menu-icon" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navlist"></button>
     <ul class="navlist" id="navlist">
         <li><a href="../Html/home.html">Home</a></li>
         <li><a href="../Html/About.html">About</a></li>
         <li><a href="../Html/Internships.html" class="active-nav">Internships</a></li>
         <li><a href="../Html/Skills.html">Skills</a></li>
         <li><a href="../Html/Projects.html">Projects</a></li>
-        <li><a href="../Html/Social_Life.html">Social Life</a></li>
-        <li><a href="../Html/Interests.html">Interests</a></li>
+        <li><a href="../Html/Social_Life.html">Engagement</a></li>
     </ul>
-</header>
-<br>
-  <section id="internships">
-    <br><br><br>
-    <br>
-    <h2>My Professional Internships</h2>
-    <div class="timeline">
-      <!-- <div class="timeline-item">
-        <img src="../../Portfoli.oMahmoudKCHAOU/img/pro.png" alt="PROGED SOLUTIONS" class="timeline-image">
-        <div class="timeline-content">
-          <h3>June 2024 - August 2024</h3>
-          <h4>Microsoft 365 Development Intern</h4>
-          <p><strong>PROGED SOLUTIONS, Sfax - Product Team Integration</strong></p>
-          
-          <p>As a key member of the Microsoft 365 development team, I mastered the full suite of productivity tools while directly contributing to client projects through:</p>
-          
-          <ul class="accomplishments">
-            <li>Full integration into the product development lifecycle within an Scrum team</li>
-            <li>Direct client interaction to gather requirements and demonstrate solutions</li>
-            <li>Development of custom business automation solutions using Power Platform and SharePoint</li>
-            <li>Implementation of complex workflows</li>
-          </ul>
-          
-          
-          
-          <div class="tech-tags">
-            <span>Office 365</span>
-            <span>Power Automate</span>
-            <span>PowerShell</span>
-            <span>SharePoint</span>
-            <span>SPFx</span>
-            <span>Power Apps</span>
-            <span>Client Relations</span>
-            <span>Scrum</span>
-          </div>
-        </div>
-      </div> -->
-
-
-      <!-- Stage 2025 --> 
-<div class="timeline-item">
-  <img src="../img/10.png" alt="INTERNATIONAL INSTITUTE OF TECHNOLOGY" class="timeline-image">
-  <div class="timeline-content">
-    <h3>July 2025 - October 2025</h3>
-    <h4>Deep Learning Intern</h4>
-    <p><strong>International Institute of Technology, Sfax</strong></p>
-    <p>Developed a lung cancer detection and classification model using 3D medical images. Focused on improving diagnostic accuracy through deep learning architectures and advanced computer vision techniques.</p>
-    <ul class="accomplishments">
-      <li>Implemented 3D CNN architectures for medical image analysis</li>
-      <li>Used YOLOv8 for tumor detection and localization</li>
-      <li>Preprocessed and visualized datasets using Matplotlib and Seaborn</li>
-      <li>Trained and evaluated models on Google Colab with TensorFlow and Keras</li>
-    </ul>
-    <div class="tech-tags">
-      <span>Python</span>
-      <span>TensorFlow</span>
-      <span>Keras</span>
-      <span>YOLOv8</span>
-      <span>CNN</span>
-      <span>Google Colab</span>
-      <span>Matplotlib</span>
-      <span>Seaborn</span>
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
     </div>
-  </div>
-</div>
-
-      <!-- Stage 2024 -->
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><i class="bx bx-sun" aria-hidden="true"></i></button>
+</header>
+<section id="internships">
+<h2>My Professional Internships</h2>
+    <div class="timeline">
+      <!-- 2026 -->
       <div class="timeline-item">
-        <img src="../img/9.png" alt="PROGED SOLUTIONS" class="timeline-image">
+        <img src="../img/itanis-logo.png" alt="ITANIS" class="timeline-image timeline-image--itanis">
         <div class="timeline-content">
-          <h3>February 2024 - June 2024</h3>
-          <h4>Full Stack Development Intern</h4>
-          <p><strong>PROGED SOLUTIONS, Sfax</strong></p>
-          <p>Developed a comprehensive Timesheet management solution to centralize and synchronize data from Mantis, Azure DevOps and MS Project. Implemented automated data extraction and integration processes to improve data consistency and operational efficiency across teams.</p>
-          <ul class="accomplishments">
-            <li>Created ReactJS frontend with responsive UI/UX design</li>
-            <li>Developed RESTful APIs with ASP.NET Core</li>
-            <li>Integrated Power BI for advanced analytics and reporting</li>
-            <li>Configured Azure MySQL for secure data storage</li>
-          </ul>
+          <h3>June 2026 - August 2026</h3>
+          <h4>Advanced Internship — Software Development</h4>
+          <p><strong>ITANIS, Sfax</strong></p>
+          <p>Designed, developed and deployed an invoicing module with AI-assisted forecasting features and a chatbot.</p>
           <div class="tech-tags">
-            <span>ReactJS</span>
-            <span>ASP.NET Core</span>
-            <span>Power BI</span>
-            <span>Azure DevOps</span>
-            <span>Azure MySQL</span>
-            <span>REST API</span>
+            <span>React</span><span>.NET</span><span>SQL Server</span><span>RabbitMQ</span><span>Git/GitHub</span><span>Docker</span>
           </div>
         </div>
       </div>
 
-      <!-- Stage 2023 -->
+      <!-- 2025 -->
       <div class="timeline-item">
-        <img src="../img/promedia.png" alt="PROGED SOLUTIONS" class="timeline-image">
+        <img src="../img/iit.png" alt="International Institute of Technology" class="timeline-image">
+        <div class="timeline-content">
+          <h3>July 2025 - August 2025</h3>
+          <h4>Initiation Internship — Deep Learning</h4>
+          <p><strong>International Institute of Technology, Sfax</strong></p>
+          <p>Developed a model to detect and classify lung cancer from 3D medical images.</p>
+          <div class="tech-tags">
+            <span>Google Colab</span><span>Python</span><span>Matplotlib</span><span>Seaborn</span><span>TensorFlow</span><span>Keras</span><span>CNN</span><span>YOLOv8</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="timeline-item">
+        <img src="../img/proged-logo.png" alt="PROGED SOLUTIONS" class="timeline-image">
+        <div class="timeline-content">
+          <h3>February 2024 - August 2024</h3>
+          <h4>Final-Year Project Internship — Timesheet Solution</h4>
+          <p><strong>PROGED SOLUTIONS, Sfax</strong></p>
+          <p>Developed a Timesheet solution for managing project work by employees.</p>
+          <div class="tech-tags">
+            <span>ReactJS</span><span>.NET Core</span><span>Power BI</span><span>Azure DevOps</span><span>Azure MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="timeline-item">
+        <img src="../img/proged-logo.png" alt="PROGED SOLUTIONS" class="timeline-image">
         <div class="timeline-content">
           <h3>June 2023 - August 2023</h3>
-          <h4>Microsoft Development Intern</h4>
+          <h4>End-of-Year Project Internship — Media Management</h4>
           <p><strong>PROGED SOLUTIONS, Sfax</strong></p>
-          <p>Designed and implemented a media management application to streamline social media publication workflows for LinkedIn and Facebook. The solution included collaborative validation processes between team members and automated scheduling features.</p>
-          <ul class="accomplishments">
-            <li>Developed using Microsoft Power Apps for rapid application development</li>
-            <li>Automated workflows with Power Automate</li>
-            <li>Created centralized data repository with SharePoint</li>
-            <li>Implemented interactive dashboards with Power BI</li>
-            <li>Integrated Microsoft Teams for team collaboration</li>
-          </ul>
+          <p>Developed a media management application to streamline social media publishing workflows.</p>
           <div class="tech-tags">
-            <span>Power Apps</span>
-            <span>Power Automate</span>
-            <span>SharePoint</span>
-            <span>Power BI</span>
-            <span>Microsoft Teams</span>
-            <span>Office 365</span>
+            <span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Microsoft Teams</span><span>Office 365</span>
           </div>
         </div>
       </div>
@@ -286,38 +234,24 @@ document.addEventListener('DOMContentLoaded', function() {
     menuIcon.addEventListener('click', function() {
       this.classList.toggle('bx-x');
       navList.classList.toggle('active');
+      const menuIsOpen = navList.classList.contains('active');
+      this.setAttribute('aria-expanded', menuIsOpen);
+      this.setAttribute('aria-label', window.portfolioLanguage === 'fr' ? (menuIsOpen ? 'Fermer la navigation' : 'Ouvrir la navigation') : (menuIsOpen ? 'Close navigation' : 'Open navigation'));
       document.body.classList.toggle('no-scroll');
     });
 
     document.querySelectorAll('.navlist a').forEach(link => {
       link.addEventListener('click', function() {
         menuIcon.classList.remove('bx-x');
+        menuIcon.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('aria-label', 'Open navigation');
         navList.classList.remove('active');
         document.body.classList.remove('no-scroll');
       });
     });
   }
 });
-
-
-// Empêcher le clic droit
-document.addEventListener('contextmenu', (e) => {
-  e.preventDefault();
-  
-});
-
-// Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
-document.addEventListener('keydown', (e) => {
-  if (
-    e.key === 'F12' ||
-    (e.ctrlKey && e.shiftKey && e.key === 'I') || // Ctrl+Shift+I
-    (e.ctrlKey && e.shiftKey && e.key === 'J') || // Ctrl+Shift+J
-    (e.ctrlKey && e.key === 'U') // Ctrl+U (afficher le code source)
-  ) {
-    e.preventDefault();
-    
-  }
-});
   </script>
+  <script src="i18n.js"></script>
 </body>
 </html>

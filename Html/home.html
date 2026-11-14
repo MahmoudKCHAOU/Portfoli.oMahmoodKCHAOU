@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>document.documentElement.lang = "en"; document.documentElement.dataset.theme = "dark"; try { if (localStorage.getItem("portfolio-language") === "fr") document.documentElement.lang = "fr"; if (localStorage.getItem("portfolio-theme") === "light") document.documentElement.dataset.theme = "light"; } catch (_) {} document.documentElement.classList.add("i18n-pending");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Mahmoud KCHAOU</title>
@@ -12,7 +13,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
-  <link rel="manifest" href="/site.webmanifest">
 
   <style>
     /* Styles modernisés avec les mêmes couleurs */
@@ -317,23 +317,28 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="../CSS/portfolio-polish.css?v=20261114theme11">
 </head>
 
 <body>
   <div class="particles" id="particles"></div>
   
   <header>
-    <a href="#" class="logo">Portfoli <span>.O</span></a>
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="../Html/home.html" class="logo">Portfoli <span>.O</span></a>
+    <button class="bx bx-menu" id="menu-icon" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navlist"></button>
     <ul class="navlist" id="navlist">
       <li><a href="../Html/home.html" class="active-nav">Home</a></li>
       <li><a href="../Html/About.html">About</a></li>
       <li><a href="../Html/Internships.html">Internships</a></li>
       <li><a href="../Html/Skills.html">Skills</a></li>
       <li><a href="../Html/Projects.html">Projects</a></li>
-      <li><a href="../Html/Social_Life.html">Social Life</a></li>
-      <li><a href="../Html/Interests.html">Interests</a></li>
+      <li><a href="../Html/Social_Life.html">Engagement</a></li>
     </ul>
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><i class="bx bx-sun" aria-hidden="true"></i></button>
   </header>
 
   <section class="hero" id="home">
@@ -341,8 +346,8 @@
       <h4 style="color: white">Hello, I'm</h4>
       <h1>Mahmoud <span style="color: white">KCHAOU</span></h1>
       <p>
-        Computer Engineering student passionate about innovative solutions and cutting-edge technologies.<br>
-        Seeking a <strong>work-study position or full-time opportunity</strong> where I can apply my technical skills and problem-solving mindset to drive impactful results.
+        Third-year Computer Engineering student with a Bachelor's degree in Big Data and Data Analytics.<br>
+        Seeking a <strong>final-year internship (PFE)</strong>, with a particular interest in artificial intelligence.
       </p>
       
       <div class="social-icons">
@@ -356,17 +361,17 @@
       </div>
       
       <div class="hero-buttons">
-        <a href="../Papier/CV__Mahmoud_KCHAOU_Anglais.pdf" download class="btn">
+        <a href="../Papier/CV_Mahmoud_KCHAOU_Fr.pdf" download class="btn">
           <i class="ri-download-line"></i> Download CV
         </a>
-        <a href="mailto:mahmoud.kchaou@iit.ens.tn?subject=Contact%20from%20Portfolio" class="btn">
+        <a href="mailto:mahmoud.kchaou@isimsf.u-sfax.tn?subject=Contact%20from%20Portfolio" class="btn">
           <i class="ri-mail-send-line"></i> Contact Me
         </a>
       </div>
     </div>
     
     <div class="hero-image">
-      <img src="../img/professional-portrait.png" alt="Mahmoud KCHAOU - Computer Engineer" class="profile-portrait">
+      <img src="../img/professional-portrait.png" alt="Mahmoud KCHAOU - Third-year Computer Engineering student" class="profile-portrait">
     </div>
   </section>
 
@@ -379,12 +384,17 @@
         menuIcon.addEventListener('click', function() {
           this.classList.toggle('bx-x');
           navList.classList.toggle('active');
+      const menuIsOpen = navList.classList.contains('active');
+      this.setAttribute('aria-expanded', menuIsOpen);
+      this.setAttribute('aria-label', window.portfolioLanguage === 'fr' ? (menuIsOpen ? 'Fermer la navigation' : 'Ouvrir la navigation') : (menuIsOpen ? 'Close navigation' : 'Open navigation'));
           document.body.classList.toggle('no-scroll');
         });
 
         document.querySelectorAll('.navlist a').forEach(link => {
           link.addEventListener('click', function() {
             menuIcon.classList.remove('bx-x');
+        menuIcon.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('aria-label', 'Open navigation');
             navList.classList.remove('active');
             document.body.classList.remove('no-scroll');
           });
@@ -413,23 +423,7 @@
         }
       }
     });
-
-    // Empêcher le clic droit
-    document.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-    });
-
-    // Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {
-      if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-        (e.ctrlKey && e.key === 'U')
-      ) {
-        e.preventDefault();
-      }
-    });
   </script>
+  <script src="i18n.js"></script>
 </body>
 </html>

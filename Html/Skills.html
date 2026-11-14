@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.lang = "en"; document.documentElement.dataset.theme = "dark"; try { if (localStorage.getItem("portfolio-language") === "fr") document.documentElement.lang = "fr"; if (localStorage.getItem("portfolio-theme") === "light") document.documentElement.dataset.theme = "light"; } catch (_) {} document.documentElement.classList.add("i18n-pending");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Mahmoud KCHAOU</title>
@@ -11,7 +12,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/ME.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/ME.png">
-  <link rel="manifest" href="/site.webmanifest">
   <style>
     /* Styles spécifiques pour la page d'accueil */
     .hero {
@@ -143,148 +143,127 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="../CSS/portfolio-polish.css?v=20261114theme11">
 </head>
 <body>
   <header>
-    <a href="#" class="logo">Portfoli <span>.O</span></a>
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="../Html/home.html" class="logo">Portfoli <span>.O</span></a>
+    <button class="bx bx-menu" id="menu-icon" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navlist"></button>
     <ul class="navlist" id="navlist">
         <li><a href="../Html/home.html" >Home</a></li>
         <li><a href="../Html/About.html">About</a></li>
         <li><a href="../Html/Internships.html">Internships</a></li>
         <li><a href="../Html/Skills.html" class="active-nav">Skills</a></li>
         <li><a href="../Html/Projects.html">Projects</a></li>
-        <li><a href="../Html/Social_Life.html">Social Life</a></li>
-        <li><a href="../Html/Interests.html">Interests</a></li>
+        <li><a href="../Html/Social_Life.html">Engagement</a></li>
     </ul>
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><i class="bx bx-sun" aria-hidden="true"></i></button>
 </header>
-<br>
-  <section class="skills-section">
+<section class="skills-section">
     <div class="skills-header">
       <h1>Skills & Certifications</h1>
       
     </div>
 
     <div class="skills-container">
-      <!-- MICROSOFT TECHNOLOGIES -->
       <div class="skill-category">
         <div class="category-header">
-          <i class='bx bxl-microsoft'></i>
-          <h2>MICROSOFT TECHNOLOGIES</h2>
+          <i class='bx bx-brain'></i>
+          <h2>ARTIFICIAL INTELLIGENCE</h2>
         </div>
         <div class="skills-list">
-          <span>Power Apps</span>
-          <span>Power BI</span>
-          <span>Power Automate</span>
-          <span>Azure</span>
-          <span>SharePoint</span>
-          <span>Word</span>
-          <span>Excel</span>
-          <span>PowerShell</span>
+          <span>CNN</span><span>LLMs</span><span>NLP</span><span>RAG</span><span>YOLOv8</span><span>TensorFlow / Keras</span><span>PyTorch</span><span>Transformers</span><span>Transfer Learning</span><span>Fine-Tuning</span><span>Google Colab</span><span>Kaggle</span><span>Roboflow</span>
         </div>
       </div>
-
-      <!-- DESIGN -->
-      <div class="skill-category">
-        <div class="category-header">
-          <i class='bx bx-planet'></i>
-          <h2>DESIGN</h2>
-        </div>
-        <div class="skills-list">
-          <span>UML</span>
-          <span>Agile</span>
-          <span>Scrum</span>
-          <span>Jira</span>
-        </div>
-      </div>
-
-      <!-- DBMS -->
       <div class="skill-category">
         <div class="category-header">
           <i class='bx bx-data'></i>
-          <h2>DBMS</h2>
+          <h2>DATA &amp; BUSINESS INTELLIGENCE</h2>
         </div>
         <div class="skills-list">
-          <span>Oracle</span>
-          <span>MySQL</span>
-          <span>MongoDB</span>
-          <span>Azure MySQL</span>
+          <span>SQL Server</span><span>SSMS</span><span>SSIS</span><span>ETL</span><span>Data Warehouse</span><span>OLAP Cube</span><span>Power BI</span><span>Power Query</span>
         </div>
       </div>
-
-      <!-- FRONTEND -->
-      <div class="skill-category">
-        <div class="category-header">
-          <i class='bx bx-code-alt'></i>
-          <h2>FRONTEND</h2>
-        </div>
-        <div class="skills-list">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>React JS</span>
-        </div>
-      </div>
-
-      <!-- DESIGN TOOLS -->
-      <div class="skill-category">
-        <div class="category-header">
-          <i class='bx bx-palette'></i>
-          <h2>DESIGN TOOLS</h2>
-        </div>
-        <div class="skills-list">
-          <span>Canva</span>
-          <span>Photoshop</span>
-          <span>Illustrator</span>
-        </div>
-      </div>
-
-      <!-- PROGRAMMING LANGUAGES -->
       <div class="skill-category">
         <div class="category-header">
           <i class='bx bx-code-curly'></i>
           <h2>PROGRAMMING LANGUAGES</h2>
         </div>
         <div class="skills-list">
-          <span>C</span>
-          <span>Python</span>
-          <span>JAVA</span>
+          <span>Python</span><span>Java</span><span>PHP</span><span>Dart</span>
         </div>
       </div>
-
-      <!-- OPERATING SYSTEMS -->
       <div class="skill-category">
         <div class="category-header">
-          <i class='bx bx-desktop'></i>
-          <h2>OPERATING SYSTEMS</h2>
+          <i class='bx bx-code-alt'></i>
+          <h2>LANGUAGES &amp; FRAMEWORKS</h2>
         </div>
         <div class="skills-list">
-          <span>Windows</span>
-          <span>Unix</span>
+          <span>React JS</span><span>Angular</span><span>Laravel</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="category-header">
+          <i class='bx bxl-microsoft'></i>
+          <h2>MICROSOFT TECHNOLOGIES</h2>
+        </div>
+        <div class="skills-list">
+          <span>Power Apps</span><span>Power BI</span><span>Power Automate</span><span>Azure</span><span>SharePoint</span><span>Word</span><span>Excel</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="category-header">
+          <i class='bx bx-server'></i>
+          <h2>DEVOPS &amp; INFRASTRUCTURE</h2>
+        </div>
+        <div class="skills-list">
+          <span>Docker</span><span>Kubernetes</span><span>CI/CD Pipelines</span>
         </div>
       </div>
     </div>
 
-    <!-- Certifications Section -->
-    <div class="certifications-section">
-      <h2>Certifications</h2>
-      <div class="certifications-grid">
-        <div class="certification-card">
-          <i class='bx bx-certificate'></i>
-          <h3>Power Platform Fundamentals (PL-900)</h3>
+    <section class="certifications-section" aria-labelledby="certifications-title">
+      <div class="certifications-heading">
+        <div>
+        <p class="certifications-eyebrow">Professional credentials</p>
+          <h2 id="certifications-title">Certifications</h2>
         </div>
-        <div class="certification-card">
-          <i class='bx bx-certificate'></i>
-          <h3>Microsoft 365 Fundamentals (MS-900)</h3>
-        </div>
-        <div class="certification-card">
-          <i class='bx bx-certificate'></i>
-          <h3>Azure Fundamentals (AZ-900)</h3>
-        </div>
-        <div class="certification-card">
-          <i class='bx bx-certificate'></i>
-          <h3>AI Fundamentals (AI-900)</h3>
-        </div>
+      </div>
+
+      <div class="certification-grid" role="list" aria-label="Certification badges">
+          <article class="certification-card" role="listitem">
+            <div class="certification-badge"><img src="../img/cert-microsoft-365-fundamentals.png?v=20261114b" alt="Microsoft Certified: Microsoft 365 Fundamentals badge" loading="lazy"></div>
+            <div class="certification-info"><p class="certification-issuer">Microsoft Certified</p><h3 class="certification-title">Microsoft 365 Fundamentals</h3><span class="credential-code">MS-900</span></div>
+          </article>
+          <article class="certification-card" role="listitem">
+            <div class="certification-badge"><img src="../img/cert-azure-fundamentals.png?v=20261114b" alt="Microsoft Certified: Azure Fundamentals badge" loading="lazy"></div>
+            <div class="certification-info"><p class="certification-issuer">Microsoft Certified</p><h3 class="certification-title">Azure Fundamentals</h3><span class="credential-code">AZ-900</span></div>
+          </article>
+          <article class="certification-card" role="listitem">
+            <div class="certification-badge"><img src="../img/cert-power-platform-fundamentals.png?v=20261114b" alt="Microsoft Certified: Power Platform Fundamentals badge" loading="lazy"></div>
+            <div class="certification-info"><p class="certification-issuer">Microsoft Certified</p><h3 class="certification-title">Power Platform Fundamentals</h3><span class="credential-code">PL-900</span></div>
+          </article>
+          <article class="certification-card" role="listitem">
+            <div class="certification-badge"><img src="../img/cert-azure-ai-fundamentals.png?v=20261114b" alt="Microsoft Certified: Azure AI Fundamentals badge" loading="lazy"></div>
+            <div class="certification-info"><p class="certification-issuer">Microsoft Certified</p><h3 class="certification-title">Azure AI Fundamentals</h3><span class="credential-code">AI-900</span></div>
+          </article>
+          <article class="certification-card" role="listitem">
+            <div class="certification-badge"><img src="../img/cert-cisco-ccna-intro-networks.png?v=20261114b" alt="Cisco Networking Academy CCNA: Introduction to Networks badge" loading="lazy"></div>
+            <div class="certification-info"><p class="certification-issuer">Cisco Networking Academy</p><h3 class="certification-title">CCNA: Introduction to Networks</h3><span class="credential-code">CCNA</span></div>
+          </article>
+      </div>
+    </section>
+
+    <div class="languages-section">
+      <h2>Languages</h2>
+      <div class="languages-list">
+        <span>Arabic</span>
+        <span>French <strong>DELF B2</strong></span>
+        <span>English</span>
       </div>
     </div>
   </section>
@@ -298,37 +277,24 @@ document.addEventListener('DOMContentLoaded', function() {
     menuIcon.addEventListener('click', function() {
       this.classList.toggle('bx-x');
       navList.classList.toggle('active');
+      const menuIsOpen = navList.classList.contains('active');
+      this.setAttribute('aria-expanded', menuIsOpen);
+      this.setAttribute('aria-label', window.portfolioLanguage === 'fr' ? (menuIsOpen ? 'Fermer la navigation' : 'Ouvrir la navigation') : (menuIsOpen ? 'Close navigation' : 'Open navigation'));
       document.body.classList.toggle('no-scroll');
     });
 
     document.querySelectorAll('.navlist a').forEach(link => {
       link.addEventListener('click', function() {
         menuIcon.classList.remove('bx-x');
+        menuIcon.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('aria-label', 'Open navigation');
         navList.classList.remove('active');
         document.body.classList.remove('no-scroll');
       });
     });
   }
 });
-
-// Empêcher le clic droit
-document.addEventListener('contextmenu', (e) => {
-  e.preventDefault();
-  
-});
-
-// Bloquer F12, Ctrl+Shift+I, Ctrl+U, etc.
-document.addEventListener('keydown', (e) => {
-  if (
-    e.key === 'F12' ||
-    (e.ctrlKey && e.shiftKey && e.key === 'I') || // Ctrl+Shift+I
-    (e.ctrlKey && e.shiftKey && e.key === 'J') || // Ctrl+Shift+J
-    (e.ctrlKey && e.key === 'U') // Ctrl+U (afficher le code source)
-  ) {
-    e.preventDefault();
-    
-  }
-});
   </script>
+  <script src="i18n.js"></script>
 </body>
 </html>
