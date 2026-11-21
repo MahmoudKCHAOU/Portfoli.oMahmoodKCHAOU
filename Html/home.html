@@ -28,7 +28,6 @@
       position: relative;
       gap: 5rem;
     }
-
     .hero-content {
       flex: 1;
       max-width: 600px;
@@ -272,8 +271,11 @@
       .hero {
         flex-direction: column;
         text-align: center;
-        padding: 120px 5% 80px;
-        gap: 2rem;
+        padding: 100px 5% 60px;
+        gap: 1.5rem;
+        height: auto;
+        max-height: none;
+        overflow: visible;
       }
       
       /* Ordre des éléments modifié pour mettre la photo en haut */
@@ -305,6 +307,13 @@
       }
     }
 
+    /* Desktop uniquement : verrouiller la page en 100vh sans scrollbar */
+    @media (min-width: 769px) {
+      body {
+        overflow: hidden;
+      }
+    }
+
     @media (max-width: 576px) {
       h1 {
         font-size: 2.4rem;
@@ -324,7 +333,7 @@
   <link rel="stylesheet" href="../CSS/portfolio-polish.css?v=20261114theme11">
 </head>
 
-<body style="overflow: hidden;">
+<body>
   <div class="particles" id="particles"></div>
   
   <header>
