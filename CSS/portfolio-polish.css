@@ -104,6 +104,12 @@ section.hero#home {
   .navlist a {
     display: block;
     padding: 12px 14px;
+    text-align: left;
+  }
+
+  .navlist li {
+    margin: 0;
+    width: 100%;
   }
 }
 
