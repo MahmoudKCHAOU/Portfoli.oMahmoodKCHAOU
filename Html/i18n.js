@@ -13,7 +13,7 @@
     ],
     "About.html": [
       ["#academic-journey h2", "My Academic Journey", "Mon parcours académique"],
-      [".timeline-content h4", ["Engineering Degree in Computer Science (In Progress)", "Bachelor's Degree in Big Data and Data Analysis", "Technical Sciences Baccalaureate"], ["Diplôme d’ingénieur en informatique (en cours)", "Licence en Big Data et analyse des données", "Baccalauréat en sciences techniques"]],
+      [".timeline-content h4", ["Engineering Degree in Computer Science (In Progress)", "Bachelor's Degree in Big Data and Data Analysis", "High School Diploma in Technical Sciences"], ["Diplôme d’ingénieur en informatique (en cours)", "Licence en Big Data et analyse des données", "Baccalauréat en sciences techniques"]],
       [".education-school", ["International Institute of Technology, Sfax", "Higher Institute of Computer Science and Multimedia, Sfax", "Fadhel Ben Achour High School, Sfax"], ["Institut International de Technologie, Sfax", "Institut Supérieur d’Informatique et de Multimédia de Sfax", "Lycée Fadhel Ben Achour, Sfax"]],
       [".education-status", "In progress", "En cours"],
     ],
@@ -45,11 +45,14 @@
     ],
     "Skills.html": [
       [".skills-header h1", "Skills & Certifications", "Compétences et certifications"],
-      [".category-header h2", ["ARTIFICIAL INTELLIGENCE", "DATA & BUSINESS INTELLIGENCE", "PROGRAMMING LANGUAGES", "LANGUAGES & FRAMEWORKS", "MICROSOFT TECHNOLOGIES", "DEVOPS & INFRASTRUCTURE"], ["INTELLIGENCE ARTIFICIELLE", "DATA & BUSINESS INTELLIGENCE", "LANGAGES DE PROGRAMMATION", "LANGAGES & FRAMEWORKS", "TECHNOLOGIES MICROSOFT", "DEVOPS & INFRASTRUCTURE"]],
+      [".category-header h2", ["ARTIFICIAL INTELLIGENCE", "DATA & BUSINESS INTELLIGENCE", "PROGRAMMING LANGUAGES", "LANGUAGES & FRAMEWORKS", "MICROSOFT TECHNOLOGIES", "DEVOPS & INFRASTRUCTURE"], ["INTELLIGENCE ARTIFICIELLE", "DONNÉES & INTELLIGENCE D’AFFAIRES", "LANGAGES DE PROGRAMMATION", "LANGAGES ET FRAMEWORKS", "TECHNOLOGIES MICROSOFT", "DEVOPS ET INFRASTRUCTURE"]],
       ["#certifications-title", "Certifications", "Certifications"],
       [".certifications-eyebrow", "Professional credentials", "Certifications professionnelles"],
+      [".certification-issuer", ["Microsoft Certified", "Microsoft Certified", "Microsoft Certified", "Microsoft Certified", "Cisco Networking Academy"], ["Certification Microsoft", "Certification Microsoft", "Certification Microsoft", "Certification Microsoft", "Cisco Networking Academy"]],
+      [".certification-title", ["Microsoft 365 Fundamentals", "Azure Fundamentals", "Power Platform Fundamentals", "Azure AI Fundamentals", "CCNA: Introduction to Networks"], ["Microsoft 365 — notions fondamentales", "Azure — notions fondamentales", "Power Platform — notions fondamentales", "Azure AI — notions fondamentales", "CCNA : introduction aux réseaux"]],
+      [".certification-badge img", ["Microsoft Certified: Microsoft 365 Fundamentals badge", "Microsoft Certified: Azure Fundamentals badge", "Microsoft Certified: Power Platform Fundamentals badge", "Microsoft Certified: Azure AI Fundamentals badge", "Cisco Networking Academy CCNA: Introduction to Networks badge"], ["Badge Microsoft Certified — Microsoft 365 Fundamentals", "Badge Microsoft Certified — Azure Fundamentals", "Badge Microsoft Certified — Power Platform Fundamentals", "Badge Microsoft Certified — Azure AI Fundamentals", "Badge Cisco Networking Academy — CCNA : introduction aux réseaux"], "alt"],
       [".languages-section > h2", "Languages", "Langues"],
-      [".languages-list > span", ["Arabic", "French DELF B2", "English"], ["Arabe", "Français DELF B2", "Anglais"]],
+      [".languages-list > span", ["Arabic", "French", "English"], ["Arabe", "Français", "Anglais"], "childText"],
     ],
     "Social_Life.html": [
       [".container > h1", "Engagement & Interests", "Engagements & centres d’intérêt"],
@@ -131,6 +134,9 @@
 
     const languageGroup = document.querySelector(".language-switch");
     if (languageGroup) languageGroup.setAttribute("aria-label", lang === "fr" ? "Choisir la langue" : "Choose language");
+
+    const certificationGrid = document.querySelector(".certification-grid");
+    if (certificationGrid) certificationGrid.setAttribute("aria-label", lang === "fr" ? "Badges de certification" : "Certification badges");
 
     document.querySelectorAll(".language-switch button").forEach(button => {
       const active = button.dataset.lang === lang;

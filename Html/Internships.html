@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', function() {
         menuIcon.classList.remove('bx-x');
         menuIcon.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('aria-label', 'Open navigation');
+        menuIcon.setAttribute('aria-label', window.portfolioLanguage === 'fr' ? 'Ouvrir la navigation' : 'Open navigation');
         navList.classList.remove('active');
         document.body.classList.remove('no-scroll');
       });
