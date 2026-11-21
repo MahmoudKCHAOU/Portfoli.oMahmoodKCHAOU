@@ -8,7 +8,7 @@
     "home.html": [
       [".hero-content h4", "Hello, I'm", "Bonjour, je suis"],
       [".hero-content p", "Third-year Computer Engineering student with a Bachelor's degree in Big Data and Data Analytics.<br>Seeking a <strong>final-year internship (PFE)</strong>, with a particular interest in artificial intelligence.", "Étudiant en 3ᵉ année du cycle ingénieur en Génie Informatique, titulaire d’une licence en Big Data et Analyse de Données.<br>À la recherche d’un <strong>stage de fin d’études (PFE)</strong>, avec un intérêt particulier pour l’intelligence artificielle.", "html"],
-      [".hero-buttons a.btn", ["Download CV · FR", "Contact Me"], ["Télécharger mon CV", "Me contacter"], "childText"],
+      [".hero-buttons a.btn:last-child", "Contact Me", "Me contacter"],
       [".profile-portrait", "Mahmoud KCHAOU - Third-year Computer Engineering student", "Mahmoud KCHAOU - Étudiant en 3ᵉ année de Génie Informatique", "alt"],
     ],
     "About.html": [

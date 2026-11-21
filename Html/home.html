@@ -159,7 +159,19 @@
 
     .hero-buttons {
       display: flex;
-      gap: 1.8rem;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-cv .cv-lang {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-left: 0.1rem;
     }
 
     .btn {
@@ -361,8 +373,11 @@
       </div>
       
       <div class="hero-buttons">
-        <a href="../Papier/CV_Mahmoud_KCHAOU_Fr.pdf" download class="btn">
-          <i class="ri-download-line"></i> Download CV
+        <a href="../Papier/CV_Mahmoud_KCHAOU_Fr.pdf" download class="btn btn-cv">
+          <i class="ri-download-line"></i> CV <span class="cv-lang">FR</span>
+        </a>
+        <a href="../Papier/CV__Mahmoud_KCHAOU_Anglais.pdf" download class="btn btn-cv">
+          <i class="ri-download-line"></i> CV <span class="cv-lang">EN</span>
         </a>
         <a href="mailto:mahmoud.kchaou@isimsf.u-sfax.tn?subject=Contact%20from%20Portfolio" class="btn">
           <i class="ri-mail-send-line"></i> Contact Me
